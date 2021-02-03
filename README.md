@@ -5,6 +5,10 @@
 
 Tiny configuration library tailored for Deep Learning project and the [Ride](https://github.com/LukasHedegaard/ride) library. 
 
+```bash
+pip install corider
+```
+
 ## Organising configurations and arguments for Deep Learning projects
 Keeping track of, merging and exposing configurations as arguments can be cumbersome and introduces a lot of boiler-plate code.
 This tiny library aims to introduce a configuration structure, that will fit many Deep Learning projects.
