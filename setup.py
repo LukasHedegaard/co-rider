@@ -17,7 +17,7 @@ def long_description():
 
 setup(
     name="corider",
-    version="0.1.0",
+    version="0.1.2",
     description="Tiny configuration library tailored for Deep Learning project and the Ride.",
     long_description=long_description(),
     long_description_content_type="text/markdown",
