@@ -1,0 +1,12 @@
+dropout:
+  type: float
+  strategy: choice
+  choices: [0.0, 0.1, 0.2, 0.3, 0.4]
+learning_rate:
+  type: float
+  strategy: loguniform
+  choices: [0.01, 0.5]
+weight_decay:
+  type: float
+  strategy: loguniform
+  choices: [0.000001, 0.001]
