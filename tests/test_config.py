@@ -2,7 +2,7 @@ from argparse import ArgumentParser, Namespace
 
 import pytest
 
-from corider.config import Config, Configs, Strategy
+from corider.config import Config, Configs, Strategy, namespace
 
 
 def test_empty():
@@ -294,3 +294,32 @@ def test_from_file():
 
     c_json = Configs.from_file("./tests/example_hparams_space.json")
     assert c_json.values == target
+
+
+def test_default_values():
+    c = Configs()
+    c.add(
+        name="one",
+        type=int,
+        default=1,
+        strategy="constant",
+        description="",
+    )
+    c.add(
+        name="two",
+        type=int,
+        default=2,
+        strategy="choice",
+        description="",
+        choices=[2, 20],
+    )
+    c.add(
+        name="three",
+        type=int,
+        default=3,
+        strategy="uniform",
+        description="",
+        choices=[3, 30],
+    )
+
+    assert c.default_values() == namespace({"one": 1, "two": 2, "three": 3})
