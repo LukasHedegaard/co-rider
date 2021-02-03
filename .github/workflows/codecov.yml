@@ -21,7 +21,7 @@ jobs:
         pip install .[test]
     - name: Generate coverage report
       run: |
-        pytest --cov corider --cov-report=xml
+        pytest --cov=./
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v1
       with:
