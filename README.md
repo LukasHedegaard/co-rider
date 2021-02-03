@@ -1,7 +1,7 @@
 # Co-Rider
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![codecov](https://codecov.io/gh/LukasHedegaard/datasetops/branch/master/graph/badge.svg)](https://codecov.io/gh/LukasHedegaard/corider)
+[![codecov](https://codecov.io/gh/LukasHedegaard/co-rider/branch/master/graph/badge.svg)](https://codecov.io/gh/LukasHedegaard/corider)
 
 Tiny configuration library tailored for Deep Learning project and the [Ride](https://github.com/LukasHedegaard/ride) library. 
 
