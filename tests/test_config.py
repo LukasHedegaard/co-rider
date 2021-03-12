@@ -2,7 +2,7 @@ from argparse import ArgumentParser, Namespace
 
 import pytest
 
-from corider.config import Config, Configs, Strategy, namespace
+from corider.config import Config, Configs, Strategy
 
 
 def test_empty():
@@ -322,4 +322,4 @@ def test_default_values():
         choices=[3, 30],
     )
 
-    assert c.default_values() == namespace({"one": 1, "two": 2, "three": 3})
+    assert c.default_values() == {"one": 1, "two": 2, "three": 3}

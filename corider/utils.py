@@ -1,17 +1,18 @@
 import json
-from argparse import Namespace
 from pathlib import Path
-from typing import Any, Dict, Union
+from typing import Any
 
 import yaml
 
+# from typing import Dict, Union
+# from argparse import Namespace
 
-def namespace(namespace_or_dict: Union[Namespace, Dict[str, Any]]) -> Namespace:
-    """If given a dict, it is converted it to an argparse.Namespace.Otherwise, no change is made"""
-    if isinstance(namespace_or_dict, dict):
-        return Namespace(**namespace_or_dict)
-    else:
-        return namespace_or_dict
+# def namespace(namespace_or_dict: Union[Namespace, Dict[str, Any]]) -> Namespace:
+#     """If given a dict, it is converted it to an argparse.Namespace.Otherwise, no change is made"""
+#     if isinstance(namespace_or_dict, dict):
+#         return Namespace(**namespace_or_dict)
+#     else:
+#         return namespace_or_dict
 
 
 def load_structured_data(path: Path):

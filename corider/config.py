@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Optional, Sequence, Type, TypeVar, Union
 from warnings import warn
 
-from .utils import load_structured_data, namespace
+from .utils import load_structured_data
 
 
 class Strategy(Enum):
@@ -146,7 +146,7 @@ class Configs:
         return config
 
     def default_values(self):
-        return namespace({k: v.default for k, v in self.values.items()})
+        return {k: v.default for k, v in self.values.items()}
 
     def add_tune_argparse_args(self, parent_parser):
         parser = ArgumentParser(parents=[parent_parser], add_help=False)
