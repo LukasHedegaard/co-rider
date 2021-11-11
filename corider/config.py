@@ -125,7 +125,8 @@ class Configs:
         from ray import tune  # type: ignore
 
         def map_space(h: Config):
-
+            if h.choices is None:
+                return
             if h.strategy == Strategy.CHOICE:
                 return tune.choice(h.choices)
             elif h.strategy == Strategy.UNIFORM:
